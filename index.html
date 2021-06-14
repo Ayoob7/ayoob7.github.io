@@ -1,0 +1,349 @@
+﻿<!doctype html>
+<html lang="en">
+  
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:image/svg+xml,
+    <svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22>
+      <text y=%22.9em%22 font-size=%2290%22>
+        🌏
+      </text>
+    </svg>">    
+    <link rel="stylesheet" href="https://latex.now.sh/style.min.css" />
+    <title>Ayoub from Earth</title>
+
+    <!-- Scrollbar -->
+    <style>
+      /* width */
+      ::-webkit-scrollbar {
+        width: 10px;
+      }
+      
+      /* Track */
+      ::-webkit-scrollbar-track {
+        box-shadow: inset 0 0 5px rgb(226, 226, 226); 
+        border-radius: 10px;
+      }
+       
+      /* Handle */
+      ::-webkit-scrollbar-thumb {
+        background: #888; 
+        border-radius: 10px;
+      }
+      
+      /* Handle on hover */
+      ::-webkit-scrollbar-thumb:hover {
+        background: #555; 
+      }
+      </style>
+      
+  </head>
+  <body>
+    <div id="top" role="document">
+      <header>
+        <h1>Mohamed Ayoub</h1> 
+        <p>An Artificial Intelligence and Science researcher by day, and a
+          Judo student by night. Researching and teaching are my passions.
+          When not reading books on environment or astronomy, I can be
+          found hiking or riding my bicycle. I sometimes bake stuff.
+          Reading is my sin of choice. A natural Pythonista.</p>
+      </header>
+      <h3>Contents</h3>
+      <nav>
+        <ol>
+          <li>
+            <a href="#text">About Me</a>
+            <ul>
+              <li><a href="#text__headings">Biography</a></li>
+              <li><a href="#research_interest">Research Interests</a></li>
+              <li><a href="#picture">Pictures</a></li>
+              <li><a href="#text__code">Inspirational Computer Science Algorithm</a></li>
+              <li><a href="#inspirational_effective_theory">Inspirational Theoretical Physics Theory</a></li>
+              <li><a href="#inspirational_biological_theory">Inspirational Biological Theory</a></li>
+            </ul>
+          </li>
+          
+          <li>
+            <a href="#awards">Awards</a>
+          </li>
+
+          <li>
+            <a href="#publications">Publications</a>
+          </li>
+
+          <li>
+            <a href="#res_exp">Research Experience</a>
+          </li>
+          
+          <li>
+            <a href="#prof_exp">Professional Experience</a>
+          </li>
+          
+        </ol>
+      </nav>
+      <main>
+        <section id="text">
+          <header><h2>About Me</h2></header>
+          <article id="text__headings">
+            <header><h3>Biography</h3></header>
+            <p>
+              I am Mohamed Ayoub doing my M.Phil in Computer Science in the Department of Computer Science at the 
+              University of Nottingham on a scholarship from the Faculty of Science.
+              <br>
+              <br>
+              Although I started out as a student in software engieering in 2016, since 2021 my focus has been on reducing 
+              the carbon footprint of the planet using machine learning, and using computer science researches on agriculture 
+              to solve the food crisis. For the past couple of years, I have been fixated learning more about the biodiversity 
+              potential of forests, looking at both conservation and restoration.
+              <br>
+              <br>
+              <i>Pronunciation: <b>Ayoub</b> say “ice cube” without the “c”s.</i>
+              <br>
+              <br>
+              <i>Current work</i>: Working on my M.Phil research on using machine learning to tackle climate change.
+            </p>
+            <footer><p><a href="#top">[Top]</a></p></footer>
+          </article>
+
+          <article id="research_interest">
+            <header><h3>Research Interests</h3></header>
+            <ol>
+              <li>Deep Learning</li>
+              <li>Image generative models</li>
+              <li>Applied machine learning in climate change</li>
+              <li>Applied machine learning in remote sensing</li>
+              <li>Applied machine learning in precision agriculture</li>
+              <li>Applied machine learning in regenerative agriculture</li>
+              <li>Correlations between adverse health effects and climate change</li>
+            </ol>
+            <footer><p><a href="#top">[Top]</a></p></footer>
+          </article>
+
+          <article id="picture">
+            <header><h3>Pictures</h3></header>
+              <figure>
+                <img src="images/hero.jpg" alt="Photo of a myself">
+                <figcaption>Hi there...</figcaption>
+              </figure>
+
+              <figure>
+                <img src="images/confused.jpg" alt="Me when I found out that the dessert was not going to be distributed." width="341" height="341">
+                <figcaption>Me when I found out that the dessert was <b>NOT</b> going to be distributed.</figcaption>
+              </figure>
+
+              <figure>
+                <img src="images/best_ressearch.jpg" alt="Photo of best research award.">
+                <figcaption>Best Research Award Winner - Batch of 2020 - Computer Science - University of Westminster.</figcaption>
+              </figure>
+
+              <figure>
+                <img src="images/parata_1.jpg" alt="Parata Challenge.">
+                <img src="images/parata_2.jpg" alt="Parata Challenge.">
+                <figcaption>Parata Eating Challenge 😂 Definitely ended messier than it began.</figcaption>
+              </figure>
+
+              <figure>
+                <img src="images/workshop_school.jpg" alt="Computer Science workshop for School students">
+                <figcaption>Computer Science workshop for School students.</figcaption>
+              </figure>
+              
+            <footer><p><a href="#top">[Top]</a></p></footer>
+          </article>
+
+          <article id="text__code">
+            <header><h3>Inspirational Computer Science Algorithm</h3></header>
+            <div>
+              <p>One of the solutions to the Knapsack Problem (My favourite problem in Computer Science).</p>
+              <pre>
+# Returns the maximum value that
+# can be put in a knapsack of
+# capacity W
+ 
+def knapSack(W, wt, val, n):
+    if n == 0 or W == 0:
+        return 0
+    if (wt[n-1] > W):
+        return knapSack(W, wt, val, n-1)
+    else:
+        return max(
+            val[n-1] + knapSack(
+                W-wt[n-1], wt, val, n-1),
+            knapSack(W, wt, val, n-1))</pre>
+            </div>
+            <footer><p><a href="#top">[Top]</a></p></footer>
+          </article>
+
+          <article id="inspirational_effective_theory">
+            <header><h3>Inspirational Theoretical Physics Theory</h3></header>
+            <p>Chaos Theory in one innocent equation.</p>
+            <img src="http://latex.codecogs.com/svg.latex?x_{n+1} = \lambda x_n(1 - x_n)" border="0"/>
+            <p>This is perhaps one effective theory <i>(a scientific theory which 
+              proposes to describe a certain set of observations, but explicitly without the claim or implication that the mechanism 
+              employed in the theory has a direct counterpart in the actual causes of the observed phenomena to which the theory is fitted)</i>
+              that accurately accepts the unpredictability of the world we live in.</p>
+            <footer><p><a href="#top">[Top]</a></p></footer>
+          </article>
+
+          <article id="inspirational_biological_theory">
+            <header><h3>Inspirational Biological Theory</h3></header>
+            <h4>Emergence Theory</h4>
+            
+            <p>Emergence refers to the existence or formation of collective behaviors — what parts of a system do together 
+              that they would not do alone. 
+              <ul>
+                <li>
+                  <p>For example, cells that make up a muscle display the emergent property of 
+                    working together to produce the muscle's overall structure and movement.</p>
+                </li>
+                <li>
+                  <p>Another example would be Adenosine triphosphate, also known as ATP, is a molecule that carries energy within cells. 
+                    It is the main energy currency of 
+                  the cell, and it is an end product of the processes of photophosphorylation (adding a phosphate group to a molecule 
+                  using energy from light), cellular respiration, and fermentation.</p>
+                </li>
+              </ul>
+            <footer><p><a href="#top">[Top]</a></p></footer>
+          </article>
+
+        </section>
+
+        <section id="awards">
+          <header><h2>Awards</h2></header>
+          <p>Work in progress</p>
+          <footer><p><a href="#top">[Top]</a></p></footer>
+        </section>
+        
+        <section id="pulications">
+          <header><h2>Publications</h2></header>
+          <p>Work in progress</p>
+          <footer><p><a href="#top">[Top]</a></p></footer>
+        </section>
+        
+        <section id="res_exp">
+          <header><h2>Research Experience</h2></header>
+          <ol>
+            <li>
+              <b>Automatic procedural scene generation by instance mesh segmentation and navigation from volumetric data on cellular structures using Python and ThreeJS.</b>
+              <br>
+              <i>Visiting Student Researcher - KAUST, Saudi Arabia.</i>
+              <br>
+              <i>Supervised by Dr. Ciril Bohak</i>
+              <p>
+                Nano visualization poses several new technological challenges that are not reflected in the state of the art computer graphics and 3D visualization as of today. The underlying domain requires new techniques for multi-scale, multi-instance, dense, three-dimensional models which were never subject to technological advances in 3D graphics before. 
+<br>
+Research carried out in nano visualization were to thoroughly revisit all technological aspects of rendering, visualization, navigation, user interaction, and modeling in order to offer an algorithmic solution that addresses visualization associated with the nano and microscopic scales. In-house custom algorithms were developed to segment multiple instances of cellular objects under the supervision of Dr.Ciril Bohak and Prof. Ivan Viola. We developed 3D models based on the volumetric data using the marching cubes algorithm. We visualized the nanostructures in a phong liquid environment. The final artifact of the research was a process to convert instance based meshes from volumetric tensor using Python, Javascript was used to ingress the 3D models in a liquid environment and navigate. This process of instance extraction was 400-500% percent faster than entire volumetric data and less than 10% in size.
+
+              </p>
+            </li>
+            <br>
+            <li>
+              <b>Manifold Learning of Latent Space Vectors in Generative Adversarial Networks for Image Synthesis.</b>
+              <br>
+              <i>Final year dissertation, IIT Sri Lanka.</i>
+              <br>
+              <i>Supervised by Senior Lecturer, Guhanathan Poravi.</i>
+              <p>
+                Generative Adversarial Networks have attained remarkable results in image augmentation and generation. GAN models consist of Latent space vectors. Mathematically they are a hypersphere consisting of many dimensions, containing the learnt representation. However, various GAN variants use different techniques to model latent space vectors. 
+                <br>
+                My dissertation dissects the latent space vectors of state-of-the-arts GAN variants, for image synthesis. We also compare and contrast optimization methods of latent space vectors in existing literature. In this dissertation, we undertake a comparative analysis of latent space vectors and optimization methods of the popular image synthesizing GAN models. Based on a review of mathematical methods we choose manifold learning techniques to cluster the latent space. Results of clustering allowed us to determine the sparse and dense features of Euclidean image distribution. The research on the image augmentation techniques allowed the authors to make a deployable facial recognition system utilizing advanced image models. We reviewed existing work on face recognition such as the FaceNet model to make the system. We further used concurrent programming principles to optimize the model to train 40% faster than the FaceNet network.                
+              </p>
+            </li>
+          </ol>
+          <footer><p><a href="#top">[Top]</a></p></footer>
+        </section>
+        
+        <section id="prof_exp">
+          <header><h2>Professional Experience</h2></header>
+          <ul>
+            <li>
+              <p><b>Data Science Intern,</b><i>Zone24x7, Advanced Technical Center, Sri Lanka</i></p>
+              <ul>
+                <li>
+                  Prototyped in-house rule mining algorithms for clickstream data, inference speed grew by 40% by optimizing algorithms. 
+                </li>
+                <li>
+                  Conserved time for the team during an M&A by automating a refactoring task that was done manually by writing a script.
+                </li>
+                <li>
+                  Increased model inference speed by 10% by model compression. 
+                </li>
+              </ul>
+            </li>
+
+            <li>
+              <p><b>Visiting Student Researcher,</b><i>King Abdullah University of Science and Technology (KAUST), Saudi Arabia</i></p>
+              <ul>
+                <li>
+                  Selected as 1 of 60 worldwide, to work with Dr. Ciril Bohak, KAUST, to work on the nano visualization research group on cellular rendering.
+                </li>
+                <li>
+                  Worked with liquid environments and simulated fluid dynamics of cells in 3D space.
+                </li>
+                <li>
+                  Created 3D models of cell structures for liquid environments. 
+                </li>
+              </ul>
+            </li>
+
+            <li>
+              <p><b>Data Science Mentor,</b><i>WooTech, Singapore</i></p>
+              <ul>
+                <li>
+                  WooTech is an organization fostering women in technology.
+                </li>
+                <li>
+                  Created experiments on a niche dataset to explore the applications of artificial intelligence for astronomy.
+                </li>
+                <li>
+                  Instructed 4 mentees on implementing fine-grained classification for data classification and evaluated their performance. 
+                </li>
+              </ul>
+            </li>
+
+            <li>
+              <p><b>Visiting Lecturer,</b><i>Informatics Institute of Technology, Sri Lanka </i></p>
+              <ul>
+                <li>
+                  Invited as a part-time lecturer due to my award as the best research project
+                </li>
+                <li>
+                  Conducting lectures on web development for first-year students.
+                </li>
+                <li>
+                  Conducting lectures on a data science module for second-year students. 
+                </li>
+                <li>
+                  Conducting lectures on a deep learning module for final-year students. 
+                </li>
+              </ul>
+            </li>
+
+            <li>
+              <p><b>Data Scientist,</b><i>Octave, Sri Lanka</i></p>
+              <ul>
+                <li>
+                  Deployed various feature requests in consumer retail data as part of business unit specifications. 
+                </li>
+                <li>
+                  Working with lapse prevention in insurance data.
+                </li>
+                <li>
+                  Worked with the Microsoft Azure Cloud stack. 
+                </li>
+              </ul>
+            </li>
+
+          </ul>
+          
+          <footer><p><a href="#top">[Top]</a></p></footer>
+        </section>
+        
+      </main>
+      <footer>
+        <p>Maybe you are here, maybe you are not there, maybe you have read about "alternative histories” formulation of 
+          quantum physics. Maybe the future, is indefinite and exists only as a spectrum of possibilities</p>
+      </footer>
+    </div>
+  </body>
+</html>
